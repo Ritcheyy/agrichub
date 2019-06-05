@@ -28,7 +28,8 @@ class UsersController extends Controller
     public function ViewUserProfile($id){
 //        Pass Id
         $user = User::find($id);
-        return view('user/view')->with('user', $user);
+        $userAds = Ads::where('user_id', $user->id)->get();
+        return view('user/view')->with(['user' => $user, 'userAds' => $userAds]);
     }
 
     public function showEditProfile(){

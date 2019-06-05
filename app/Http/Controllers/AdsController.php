@@ -63,6 +63,9 @@ class AdsController extends Controller
 //        Todo: Image Upload
 
 //        Inserting
+        $default_imgs = ['/storage/img/agric1.jpg', '/storage/img/agric2.jpg', '/storage/img/agric3.jpg'];
+        $ran = rand(0,2);
+
         $ad = new Ads();
         $ad->user_id = auth()->user()->id;
         $ad->title = $title;
@@ -70,6 +73,7 @@ class AdsController extends Controller
         $ad->quantity = $quantity;
         $ad->price = $price;
         $ad->category = $category;
+        $ad->img_url = $default_imgs[$ran];
         $location = auth()->user()->country.",".auth()->user()->state.",".auth()->user()->town;
         $ad->location = $location;
         $ad->save();

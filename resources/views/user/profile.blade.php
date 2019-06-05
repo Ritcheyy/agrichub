@@ -36,7 +36,6 @@
             <center>
 
 
-
                 <div class="col s12 m8 l9 mbox">
                     @include('inc.messages')
                     <div class="mbox-content">
@@ -62,11 +61,15 @@
 
                                     <li class="collection-item avatar">
                                         <a href="#">
-                                            {{--Todo: Ads Image--}}
-                                            <i class="material-icons circle">folder</i>
+                                            <?php
+                                            $eachImg = explode(',', $UserAd->img_url);
+                                            $img_url = $eachImg[0];
+                                            ?>
+                                            <img src="{{URL::to($img_url)}}" class="circle">
                                             <span class="title">{{$UserAd->title}}</span>
                                             <p>{{$UserAd->category}}</p>
-                                            <a href="#" class="secondary-content dropdown-button" data-activates='dropdown{{$UserAd->id}}'>
+                                            <a href="#" class="secondary-content dropdown-button"
+                                               data-activates='dropdown{{$UserAd->id}}'>
                                                 <i class="material-icons">more_vert</i></a>
 
                                             <ul id='dropdown{{$UserAd->id}}' class='dropdown-content'>
@@ -75,7 +78,9 @@
                                                 <form action="{{route('ads.destroy', $UserAd->id)}}" method="post">
                                                     {{csrf_field()}}
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <li><button type="submit">Delete</button></li>
+                                                    <li>
+                                                        <button type="submit">Delete</button>
+                                                    </li>
                                                 </form>
                                             </ul>
                                         </a>

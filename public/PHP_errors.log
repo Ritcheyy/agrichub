@@ -1,0 +1,7 @@
+[20-Apr-2018 17:10:05 UTC] PHP Warning:  require_once(/storage/ssd5/777/5467777/agrichub/vendor/composer/autoload_real.php): failed to open stream: No such file or directory in /storage/ssd5/777/5467777/agrichub/vendor/autoload.php on line 5
+[20-Apr-2018 17:10:05 UTC] PHP Fatal error:  require_once(): Failed opening required '/storage/ssd5/777/5467777/agrichub/vendor/composer/autoload_real.php' (include_path='.:/usr/share/pear:/usr/share/php') in /storage/ssd5/777/5467777/agrichub/vendor/autoload.php on line 5
+[20-Apr-2018 17:10:18 UTC] PHP Warning:  require_once(/storage/ssd5/777/5467777/agrichub/vendor/composer/autoload_real.php): failed to open stream: No such file or directory in /storage/ssd5/777/5467777/agrichub/vendor/autoload.php on line 5
+[20-Apr-2018 17:10:18 UTC] PHP Fatal error:  require_once(): Failed opening required '/storage/ssd5/777/5467777/agrichub/vendor/composer/autoload_real.php' (include_path='.:/usr/share/pear:/usr/share/php') in /storage/ssd5/777/5467777/agrichub/vendor/autoload.php on line 5
+[20-Apr-2018 18:28:53 UTC] PHP Warning:  symlink() has been disabled for security reasons in /storage/ssd5/777/5467777/public_html/create_sym.php on line 2
+[20-Apr-2018 18:31:01 UTC] PHP Warning:  symlink() has been disabled for security reasons in /storage/ssd5/777/5467777/public_html/create_sym.php on line 2
+[20-Apr-2018 18:31:04 UTC] PHP Warning:  symlink() has been disabled for security reasons in /storage/ssd5/777/5467777/public_html/create_sym.php on line 2

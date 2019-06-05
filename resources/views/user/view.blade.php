@@ -66,24 +66,19 @@
                         <div class="header white-text green">Farmer's Ads</div>
                         <div class="body white">
                             <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle">folder</i>
-                                    <span class="title">50 Bags of Rice</span>
-                                    <p>11/23/1290</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle">folder</i>
-                                    <span class="title">50 Bags of Beans</span>
-                                    <p>12/12/1212</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle green">insert_chart</i>
-                                    <span class="title">Coco Yam</span>
-                                    <p>12/12/1223</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                                </li>
+                                @foreach($userAds as $userAd)
+                                    <li class="collection-item avatar">
+                                        <?php
+                                        $eachImg = explode(',', $userAd->img_url);
+                                        $img_url = $eachImg[0];
+                                        ?>
+                                        <img src="{{URL::to($img_url)}}" class="circle">
+                                        <span class="title">{{$userAd->title}}</span>
+                                        <p>{{$userAd->category}}</p>
+                                        <a href="{{URL::to('/ads/'.$userAd->id)}}" class="secondary-content"><i
+                                                    class="material-icons blue-text">visibility</i></a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

@@ -61,7 +61,7 @@
 
         <div class="container-fluid">
             <div class="the_ads">
-                <h3>Lastest Adverts</h3>
+                <h3>Latest Adverts</h3>
                 <div class="row view-ads">
 
 
@@ -71,7 +71,11 @@
                                 <div class="card hoverable">
                                     <div class="card-image">
                                         {{--Todo: Image shit--}}
-                                        <img src="{{URL::to('storage/img/img3.jpg')}}">
+                                        <?php
+                                            $eachImg = explode(',', $Ad->img_url);
+                                            $img_url =  $eachImg[0];
+                                        ?>
+                                        <img src="{{URL::to($img_url)}}">
                                     </div>
                                     <div class="card-content">
                                         <div class="title">
@@ -96,129 +100,6 @@
 
                     @endforeach
 
-
-                    <div class="col s6 m4 l3">
-                        <a href="" class="">
-                            <div class="card hoverable">
-                                <div class="card-image">
-                                    <img src="{{URL::to('storage/img/img3.jpg')}}">
-                                </div>
-                                <div class="card-content">
-                                    <div class="title">
-                                        <b>
-                                            Hello World!!!Hello World!!!Hello World!!!
-                                        </b>
-                                    </div>
-                                    <div class="price">
-                                        $1,500
-                                    </div>
-                                    <div class="location">
-                                        <i class="material-icons left">location_on</i>
-                                        Lagos
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col s6 m4 l3">
-                        <a href="" class="">
-                            <div class="card hoverable">
-                                <div class="card-image">
-                                    <img src="{{URL::to('storage/img/img3.jpg')}}">
-                                </div>
-                                <div class="card-content">
-                                    <div class="title">
-                                        <b>
-                                            Hello World!!!Hello World!!!Hello World!!!
-                                        </b>
-                                    </div>
-                                    <div class="price">
-                                        $1,500
-                                    </div>
-                                    <div class="location">
-                                        <i class="material-icons left">location_on</i>
-                                        Lagos
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="col s6 m4 l3">
-                        <a href="" class="">
-                            <div class="card hoverable">
-                                <div class="card-image">
-                                    <img src="{{URL::to('storage/img/img3.jpg')}}">
-                                </div>
-                                <div class="card-content">
-                                    <div class="title">
-                                        <b>
-                                            Hello World!!!Hello World!!!Hello World!!!
-                                        </b>
-                                    </div>
-                                    <div class="price">
-                                        $1,500
-                                    </div>
-                                    <div class="location">
-                                        <i class="material-icons left">location_on</i>
-                                        Lagos
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="col s6 m4 l3">
-                        <a href="" class="">
-                            <div class="card hoverable">
-                                <div class="card-image">
-                                    <img src="{{URL::to('storage/img/img3.jpg')}}">
-                                </div>
-                                <div class="card-content">
-                                    <div class="title">
-                                        <b>
-                                            Hello World!!!Hello World!!!Hello World!!!
-                                        </b>
-                                    </div>
-                                    <div class="price">
-                                        $1,500
-                                    </div>
-                                    <div class="location">
-                                        <i class="material-icons left">location_on</i>
-                                        Lagos
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="col s6 m4 l3">
-                        <a href="" class="">
-                            <div class="card hoverable">
-                                <div class="card-image">
-                                    <img src="{{URL::to('storage/img/img3.jpg')}}">
-                                </div>
-                                <div class="card-content">
-                                    <div class="title">
-                                        <b>
-                                            Hello World!!!Hello World!!!Hello World!!!
-                                        </b>
-                                    </div>
-                                    <div class="price">
-                                        $1,500
-                                    </div>
-                                    <div class="location">
-                                        <i class="material-icons left">location_on</i>
-                                        Lagos
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
